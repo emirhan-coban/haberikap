@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+import 'package:habercepte/pages/welcome.dart';
+import 'pages/doviz_kurlari.dart';
+import 'pages/kap_haberleri.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const Welcome(),
+      routes: {
+        '/kap_haberleri': (context) => const KapHaberleri(),
+        '/doviz': (context) => const DovizKurlari(),
+      },
+    );
+  }
+}
