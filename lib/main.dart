@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habercepte/consts/colors.dart';
 import 'package:habercepte/pages/welcome.dart';
 import 'pages/doviz_kurlari.dart';
 import 'pages/kap_haberleri.dart';
@@ -15,9 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const Welcome(),
+      theme: color(),
       routes: {
         '/kap_haberleri': (context) => const KapHaberleri(),
-        '/doviz': (context) => const DovizKurlari(),
+        '/doviz_kurlari': (context) => const DovizKurlari(),
       },
     );
   }

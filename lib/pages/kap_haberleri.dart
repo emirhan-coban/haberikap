@@ -50,25 +50,27 @@ class _KapHaberleriState extends State<KapHaberleri> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.background,
         title: Text(
           'Günün KAP Haberleri',
-          style: GoogleFonts.montserrat(
+          style: GoogleFonts.poppins(
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
         ),
         centerTitle: true,
+        foregroundColor: Theme.of(context).colorScheme.secondary,
       ),
       body: FutureBuilder(
         future: getNews(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
-            return Center(
-              child: Text('Bir hata oluştu: ${snapshot.error}'),
+            return const Center(
+              child: CircularProgressIndicator(),
             );
           } else if (newsData.isEmpty) {
             return const Center(
-              child: Text('Haber bulunamadı.'),
+              child: CircularProgressIndicator(),
             );
           } else {
             return ListView.builder(
@@ -84,24 +86,27 @@ class _KapHaberleriState extends State<KapHaberleri> {
                   },
                   title: Text(
                     newsData[index].companyName,
-                    style: GoogleFonts.montserrat(
+                    style: GoogleFonts.poppins(
                       fontSize: 18,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
+                  ),
+                  leading: Icon(
+                    Icons.newspaper,
+                    size: 50,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                   subtitle: Text(
-                    newsData[index].title,
-                    style: GoogleFonts.montserrat(
+                    "${newsData[index].title} | ${newsData[index].publishDate}",
+                    style: GoogleFonts.poppins(
                       fontSize: 14,
+                      color: Theme.of(context).colorScheme.surface,
                     ),
                   ),
-                  leading: Text(
-                    "Bugün\n${newsData[index].publishDate.substring(6, 11)}",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.montserrat(
-                      fontSize: 16,
-                    ),
+                  trailing: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
-                  trailing: const Icon(Icons.arrow_forward_ios),
                 );
               },
             );
