@@ -100,7 +100,7 @@ class _DovizKurlariState extends State<DovizKurlari> {
                           Row(
                             children: [
                               Text(
-                                'Alış: ${dovizData[index].buying} | Satış: ${dovizData[index].selling}',
+                                'Alış: ${dovizData[index].buying}TL | Satış: ${dovizData[index].selling}TL',
                                 style: GoogleFonts.poppins(
                                   color: Theme.of(context).colorScheme.secondary,
                                   fontSize: 18,

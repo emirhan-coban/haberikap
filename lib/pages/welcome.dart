@@ -212,7 +212,7 @@ class _WelcomeState extends State<Welcome> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Güncel\nDöviz Kurları',
+                              'Döviz Kurları',
                               style: GoogleFonts.poppins(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -233,6 +233,65 @@ class _WelcomeState extends State<Welcome> {
                       IconButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/doviz_kurlari');
+                        },
+                        icon: Icon(
+                          Icons.arrow_forward_ios,
+                          size: 40,
+                          color: Theme.of(context).colorScheme.background,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primary,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.money_outlined,
+                          size: 50,
+                          color: Theme.of(context).colorScheme.background,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Kripto Paralar',
+                              style: GoogleFonts.poppins(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Theme.of(context).colorScheme.background,
+                              ),
+                            ),
+                            Text(
+                              "Kripto paraların\nanlık değerlerini görün.",
+                              style: GoogleFonts.poppins(
+                                fontSize: 15,
+                                color: Theme.of(context).colorScheme.background,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(width: 30),
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/kripto_para');
                         },
                         icon: Icon(
                           Icons.arrow_forward_ios,
