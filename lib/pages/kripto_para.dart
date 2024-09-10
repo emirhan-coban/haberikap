@@ -56,8 +56,9 @@ class _KriptoParaState extends State<KriptoPara> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(28, 28, 28, 1),
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: const Color.fromRGBO(28, 28, 28, 1),
         title: Text(
           'Kripto Para Kurları',
           style: GoogleFonts.poppins(
@@ -85,7 +86,7 @@ class _KriptoParaState extends State<KriptoPara> {
                   itemCount: kriptoList.length,
                   itemBuilder: (context, index) {
                     return Card(
-                      color: Theme.of(context).colorScheme.background,
+                      color: const Color.fromRGBO(28, 28, 28, 1),
                       margin: const EdgeInsets.all(10),
                       child: ListTile(
                         title: Row(

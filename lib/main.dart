@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:habercepte/consts/colors.dart';
 import 'package:habercepte/pages/kripto_para.dart';
+import 'package:habercepte/pages/profile_page.dart';
 import 'package:habercepte/pages/welcome.dart';
 import 'pages/doviz_kurlari.dart';
 import 'pages/kap_haberleri.dart';
+import 'pages/settings_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +24,8 @@ class MyApp extends StatelessWidget {
         '/kap_haberleri': (context) => const KapHaberleri(),
         '/doviz_kurlari': (context) => const DovizKurlari(),
         '/kripto_para': (context) => const KriptoPara(),
+        '/profile_page': (context) => const ProfilePage(),
+        '/settings_page': (context) => const SettingsPage(),
       },
     );
   }

@@ -50,8 +50,9 @@ class _DovizKurlariState extends State<DovizKurlari> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: const Color.fromRGBO(28, 28, 28, 1),
         appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.background,
+          backgroundColor: const Color.fromRGBO(28, 28, 28, 1),
           title: Text(
             'Güncel Döviz Kurları',
             style: GoogleFonts.poppins(
@@ -79,7 +80,7 @@ class _DovizKurlariState extends State<DovizKurlari> {
                 itemCount: 66,
                 itemBuilder: (context, index) {
                   return Card(
-                    color: Theme.of(context).colorScheme.background,
+                    color: const Color.fromRGBO(28, 28, 28, 1),
                     margin: const EdgeInsets.all(10),
                     child: ListTile(
                       title: Row(
@@ -102,7 +103,8 @@ class _DovizKurlariState extends State<DovizKurlari> {
                               Text(
                                 'Alış: ${dovizData[index].buying}TL | Satış: ${dovizData[index].selling}TL',
                                 style: GoogleFonts.poppins(
-                                  color: Theme.of(context).colorScheme.secondary,
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
                                   fontSize: 18,
                                 ),
                               ),
@@ -111,7 +113,13 @@ class _DovizKurlariState extends State<DovizKurlari> {
                           Text(
                             'Değişim: ${dovizData[index].change}',
                             style: GoogleFonts.poppins(
-                              color: double.parse(dovizData[index].change.replaceAll("%", "").replaceAll(",", ".")) >= 0 ? Colors.green : Colors.red,
+                              color: double.parse(dovizData[index]
+                                          .change
+                                          .replaceAll("%", "")
+                                          .replaceAll(",", ".")) >=
+                                      0
+                                  ? Colors.green
+                                  : Colors.red,
                               fontSize: 18,
                             ),
                           ),

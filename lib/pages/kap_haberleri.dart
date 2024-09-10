@@ -49,8 +49,9 @@ class _KapHaberleriState extends State<KapHaberleri> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(28, 28, 28, 1),
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: const Color.fromRGBO(28, 28, 28, 1),
         title: Text(
           'Günün KAP Haberleri',
           style: GoogleFonts.poppins(

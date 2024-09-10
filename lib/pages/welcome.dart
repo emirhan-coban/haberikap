@@ -13,17 +13,22 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(28, 28, 28, 1),
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: const Color.fromRGBO(28, 28, 28, 1),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/profile_page');
+          },
           icon: Icon(Icons.account_circle,
               color: Theme.of(context).colorScheme.secondary, size: 30),
         ),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.more_vert,
+            onPressed: () {
+              Navigator.pushNamed(context, '/settings_page');
+            },
+            icon: Icon(Icons.settings,
                 color: Theme.of(context).colorScheme.secondary, size: 30),
           ),
         ],
@@ -61,10 +66,10 @@ class _WelcomeState extends State<Welcome> {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.newspaper,
                           size: 50,
-                          color: Theme.of(context).colorScheme.background,
+                          color: Color.fromRGBO(28, 28, 28, 1),
                         ),
                       ),
                       Padding(
@@ -77,14 +82,14 @@ class _WelcomeState extends State<Welcome> {
                               style: GoogleFonts.poppins(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                                color: Theme.of(context).colorScheme.background,
+                                color: const Color.fromRGBO(28, 28, 28, 1),
                               ),
                             ),
                             Text(
                               "KAP'ta yer alan güncel\nhaberlere göz atın.",
                               style: GoogleFonts.poppins(
                                 fontSize: 15,
-                                color: Theme.of(context).colorScheme.background,
+                                color: const Color.fromRGBO(28, 28, 28, 1),
                               ),
                             ),
                           ],
@@ -95,10 +100,10 @@ class _WelcomeState extends State<Welcome> {
                         onPressed: () {
                           Navigator.pushNamed(context, '/kap_haberleri');
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_forward_ios,
                           size: 40,
-                          color: Theme.of(context).colorScheme.background,
+                          color: Color.fromRGBO(28, 28, 28, 1),
                         ),
                       ),
                     ],
@@ -137,10 +142,10 @@ class _WelcomeState extends State<Welcome> {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.trending_up,
                           size: 50,
-                          color: Theme.of(context).colorScheme.background,
+                          color: Color.fromRGBO(28, 28, 28, 1),
                         ),
                       ),
                       Padding(
@@ -153,14 +158,14 @@ class _WelcomeState extends State<Welcome> {
                               style: GoogleFonts.poppins(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                                color: Theme.of(context).colorScheme.background,
+                                color: const Color.fromRGBO(28, 28, 28, 1),
                               ),
                             ),
                             Text(
                               "Borsa İstanbul\nhisse senetlerine erişin.",
                               style: GoogleFonts.poppins(
                                 fontSize: 15,
-                                color: Theme.of(context).colorScheme.background,
+                                color: const Color.fromRGBO(28, 28, 28, 1),
                               ),
                             ),
                           ],
@@ -175,10 +180,10 @@ class _WelcomeState extends State<Welcome> {
                             ),
                           );
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_forward_ios,
                           size: 40,
-                          color: Theme.of(context).colorScheme.background,
+                          color: Color.fromRGBO(28, 28, 28, 1),
                         ),
                       ),
                     ],
@@ -200,10 +205,10 @@ class _WelcomeState extends State<Welcome> {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.monetization_on,
                           size: 50,
-                          color: Theme.of(context).colorScheme.background,
+                          color: Color.fromRGBO(28, 28, 28, 1),
                         ),
                       ),
                       Padding(
@@ -216,14 +221,14 @@ class _WelcomeState extends State<Welcome> {
                               style: GoogleFonts.poppins(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                                color: Theme.of(context).colorScheme.background,
+                                color: const Color.fromRGBO(28, 28, 28, 1),
                               ),
                             ),
                             Text(
                               "Döviz kurlarını\nanlık olarak takip edin.",
                               style: GoogleFonts.poppins(
                                 fontSize: 15,
-                                color: Theme.of(context).colorScheme.background,
+                                color: const Color.fromRGBO(28, 28, 28, 1),
                               ),
                             ),
                           ],
@@ -234,10 +239,10 @@ class _WelcomeState extends State<Welcome> {
                         onPressed: () {
                           Navigator.pushNamed(context, '/doviz_kurlari');
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_forward_ios,
                           size: 40,
-                          color: Theme.of(context).colorScheme.background,
+                          color: Color.fromRGBO(28, 28, 28, 1),
                         ),
                       ),
                     ],
@@ -259,10 +264,10 @@ class _WelcomeState extends State<Welcome> {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.money_outlined,
                           size: 50,
-                          color: Theme.of(context).colorScheme.background,
+                          color: Color.fromRGBO(28, 28, 28, 1),
                         ),
                       ),
                       Padding(
@@ -275,14 +280,14 @@ class _WelcomeState extends State<Welcome> {
                               style: GoogleFonts.poppins(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                                color: Theme.of(context).colorScheme.background,
+                                color: const Color.fromRGBO(28, 28, 28, 1),
                               ),
                             ),
                             Text(
                               "Kripto paraların\nanlık değerlerini görün.",
                               style: GoogleFonts.poppins(
                                 fontSize: 15,
-                                color: Theme.of(context).colorScheme.background,
+                                color: const Color.fromRGBO(28, 28, 28, 1),
                               ),
                             ),
                           ],
@@ -293,10 +298,10 @@ class _WelcomeState extends State<Welcome> {
                         onPressed: () {
                           Navigator.pushNamed(context, '/kripto_para');
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_forward_ios,
                           size: 40,
-                          color: Theme.of(context).colorScheme.background,
+                          color: Color.fromRGBO(28, 28, 28, 1),
                         ),
                       ),
                     ],
