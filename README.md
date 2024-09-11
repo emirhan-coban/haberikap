@@ -1,5 +1,6 @@
 # 📰 | HaberiKAP
 TR | Gündemden uzak kalmayın haberi kapın! Günün KAP haberlerini takip etmekle kalmayın ayrıca uygulama içerisindeki tüm özellikleri ücretsiz ve anlık şekilde kullanın.
+
 ENG | Don't stay away from the agenda and get the news! Do not only follow the KAP news of the day, but also use all the features in the application free of charge and instantly.
 
 ## 📷 | Screenshots
